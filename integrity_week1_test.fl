@@ -1,0 +1,107 @@
+// FreeLang v2.0 Phase 1: Week 1 테스트
+// 10개의 기본 검증 테스트
+
+fn test_1_addition() {
+  println("Test 1: 덧셈")
+  let result = (2 + 3) == 5
+  println("  2+3 == 5: " + to_string(result))
+  result
+}
+
+fn test_2_subtraction() {
+  println("Test 2: 뺄셈")
+  let result = (10 - 5) == 5
+  println("  10-5 == 5: " + to_string(result))
+  result
+}
+
+fn test_3_multiplication() {
+  println("Test 3: 곱셈")
+  let result = (4 * 3) == 12
+  println("  4*3 == 12: " + to_string(result))
+  result
+}
+
+fn test_4_division() {
+  println("Test 4: 나눗셈")
+  let result = (12 / 3) == 4
+  println("  12/3 == 4: " + to_string(result))
+  result
+}
+
+fn test_5_commutativity() {
+  println("Test 5: 교환법칙")
+  let a = 7
+  let b = 4
+  let result = (a + b) == (b + a)
+  println("  7+4 == 4+7: " + to_string(result))
+  result
+}
+
+fn test_6_boolean() {
+  println("Test 6: 불린")
+  let result = (true and true) == true
+  println("  true and true: " + to_string(result))
+  result
+}
+
+fn test_7_array() {
+  println("Test 7: 배열")
+  let arr = [10, 20, 30]
+  let result = arr[0] == 10
+  println("  arr[0] == 10: " + to_string(result))
+  result
+}
+
+fn test_8_array_length() {
+  println("Test 8: 배열 길이")
+  let arr = [1, 2, 3, 4, 5]
+  let result = len(arr) == 5
+  println("  len([1,2,3,4,5]) == 5: " + to_string(result))
+  result
+}
+
+fn test_9_comparison() {
+  println("Test 9: 비교")
+  let result = (5 > 3) and (10 >= 10)
+  println("  (5 > 3) and (10 >= 10): " + to_string(result))
+  result
+}
+
+fn test_10_string() {
+  println("Test 10: 문자열")
+  let s1 = "Hello"
+  let s2 = "Hello"
+  let result = s1 == s2
+  println("  \"Hello\" == \"Hello\": " + to_string(result))
+  result
+}
+
+fn main() {
+  println("=" * 60)
+  println("FreeLang v2.0 Phase 1: Week 1 테스트 모음")
+  println("=" * 60)
+  println("")
+  
+  let t1 = test_1_addition()
+  let t2 = test_2_subtraction()
+  let t3 = test_3_multiplication()
+  let t4 = test_4_division()
+  let t5 = test_5_commutativity()
+  let t6 = test_6_boolean()
+  let t7 = test_7_array()
+  let t8 = test_8_array_length()
+  let t9 = test_9_comparison()
+  let t10 = test_10_string()
+  
+  println("")
+  println("=" * 60)
+  
+  if t1 and t2 and t3 and t4 and t5 and t6 and t7 and t8 and t9 and t10 {
+    println("✅ 모든 10개 테스트 통과!")
+  } else {
+    println("❌ 일부 테스트 실패")
+  }
+  
+  println("=" * 60)
+}
